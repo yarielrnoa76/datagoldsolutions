@@ -74,24 +74,14 @@
         box-shadow: 0 10px 25px rgba(0,0,0,0.25);
         position: relative;
         z-index: 1;
+        overflow: hidden;
     }
 
-    /* aquí puedes poner tu icono como <img> si quieres */
-    .logo-icon {
-        width: 70px;
-        height: 70px;
-        background-image: url("data-gold-icon.png"); /* cambia por la ruta real de tu icono */
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-
-    /* fallback si aún no pones imagen: un “!” dorado */
-    .logo-fallback {
-        font-size: 56px;
-        font-weight: 700;
-        color: #ffffff;
-        text-shadow: 0 0 10px rgba(0,0,0,0.25);
+    .logo-circle img {
+        width: 85px;
+        height: auto;
+        object-fit: contain;
+        filter: drop-shadow(0 0 8px rgba(0,0,0,0.35));
     }
 
     h1 {
@@ -176,12 +166,8 @@
     <div class="wrapper">
         <div class="card">
             <div class="logo-circle">
-                <!-- Usa SOLO uno de los dos: icono o fallback -->
-                <!-- Opción 1: icono real (cambia la ruta en el CSS de .logo-icon) -->
-                <!-- <div class="logo-icon"></div> -->
-
-                <!-- Opción 2: fallback con “!” mientras tanto -->
-                <div class="logo-fallback">!</div>
+                <!-- Aquí va tu logo real -->
+                <img src="dgs-logo.jpg" alt="Data Gold Solutions Logo">
             </div>
 
             <h1>Coming Soon</h1>
@@ -209,3 +195,5 @@
 </script>
 </body>
 </html>
+
+
